@@ -7,5 +7,3 @@ if __name__ == "__main__":
     for data in module_data:
         if data[0:2] != "__":
             print(data)
-
-
