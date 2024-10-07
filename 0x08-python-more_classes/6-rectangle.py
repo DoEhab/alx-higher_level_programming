@@ -1,10 +1,15 @@
 #!/usr/bin/python3
-# File: 4-rectangle.py
+# File: 5-rectangle.py
 """New Rect class"""
 
 
 class Rectangle:
-    """rect class"""
+    """rect class
+
+    Attributes:
+        number_of_instances: counts the number of objects created
+    """
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """ Initializes rect obj data
@@ -15,6 +20,7 @@ class Rectangle:
         """
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -67,3 +73,8 @@ class Rectangle:
     def __repr__(self):
         """return obj as string"""
         return "Rectangle({0}, {1})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """delete rect"""
+        Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")

@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# File: 4-rectangle.py
+# File: 5-rectangle.py
 """New Rect class"""
 
 
@@ -67,3 +67,7 @@ class Rectangle:
     def __repr__(self):
         """return obj as string"""
         return "Rectangle({0}, {1})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """delete rect"""
+        print("Bye rectangle...")

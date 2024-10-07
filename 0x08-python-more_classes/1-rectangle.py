@@ -5,19 +5,25 @@
 
 class Rectangle:
     """rect class"""
-    __width = 0
-    __height = 0
 
     def __init__(self, width=0, height=0):
+        """ Initializes rect obj data
+
+        Args:
+            width: rect width
+            height: rect height
+        """
         self.width = width
         self.height = height
 
     @property
     def width(self):
+        """Get width"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """set width"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -26,10 +32,12 @@ class Rectangle:
 
     @property
     def height(self):
+        """Get height"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """set height"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
