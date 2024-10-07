@@ -1,0 +1,15 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(1, 98)
+
+>>> add_integer(1.1, 9.8)
+>>> add_integer('a', 98)
+>>> add_integer(1, '9')
+
+>>> add_integer(0, 0.0)
+>>> add_integer(, 98)
+>>> add_integer(1, )
+
+
+
+
+
