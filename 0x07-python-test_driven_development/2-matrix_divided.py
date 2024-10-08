@@ -3,12 +3,13 @@
 def matrix_divided(matrix, div):
     row_size = len(matrix[0])
     new_matrix = []
-    if not isinstance(matrix, list) and all(isinstance(row, list) for row in matrix):
-        if all(all(isinstance(x, (int, float)) for x in row) for row in matrix):
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    if not isinstance(matrix, list) or not all(isinstance(row, list) for row in matrix):
+        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    if not all(isinstance(x, (int, float)) for row in matrix for x in row):
+        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
 
     if div == 0:
-        raise ZeroDivisionError
+        raise ZeroDivisionError("division by zero")
 
     for row in matrix:
         new_row = []
