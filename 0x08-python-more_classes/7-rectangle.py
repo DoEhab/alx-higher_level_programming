@@ -70,6 +70,8 @@ class Rectangle:
         for i in range(0, self.__height):
             for j in range(0, self.__width):
                 result.append(str(self.print_symbol))
+            if i < self.__height - 1:
+                result.append("\n")
         return ("".join(result))
 
     def __repr__(self):
