@@ -7,9 +7,22 @@
 Traceback (most recent call last):
 TypeError: 'NoneType' object is not iterable
 
->>> my_list = MyList()
->>> my_list.append(1)
->>> my_list.append(4)
->>> my_list.append(2)
->>> print(my_list)
+>>> myList = MyList()
+>>> myList.append(1)
+>>> myList.append(4)
+>>> myList.append(2)
+>>> print(myList)
 [1, 4, 2]
+
+>>> myList.print_sorted()
+[1, 2, 4]
+
+>>> myList = MyList("a", "c", "b")
+>>> myList.append(1)
+>>> myList.append(4)
+>>> myList.append(2)
+>>> print(myList)
+[a, c, b]
+
+>>> myList.print_sorted()
+[a, b, c]
