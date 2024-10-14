@@ -8,6 +8,7 @@ class Rectangle(BaseGeometry):
     """Rectangle class"""
 
     def __init__(self, width, height):
+
         """
         fun to initialize rect class
         Args:
