@@ -1,3 +1,4 @@
->>> base_geometry = __import__('7-base_geometry').BaseGeometry
+>>> baseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> base_geometry = baseGeometry()
 >>> base_geometry.area()
 area() is not implemented
