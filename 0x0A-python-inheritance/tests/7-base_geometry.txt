@@ -4,5 +4,9 @@
 area() is not implemented
 
 >>> base_geometry = BaseGeometry(None)
-    Traceback (most recent call last):
-    TypeError: object() takes no parameters
+Traceback (most recent call last):
+TypeError: object() takes no parameters
+
+>>> base_geometry = BaseGeometry(None)
+>>> base_geometry.integer_validator("testVal", 0)
+testVal must be greater than 0
