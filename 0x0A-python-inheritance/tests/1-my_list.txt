@@ -24,5 +24,3 @@ TypeError: 'NoneType' object is not iterable
 >>> print(myList)
 [a, c, b]
 
->>> myList.print_sorted()
-[a, b, c]
