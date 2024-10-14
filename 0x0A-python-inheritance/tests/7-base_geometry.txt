@@ -9,4 +9,15 @@ TypeError: BaseGeometry() takes no arguments
 
 >>> base_geometry = baseGeometry()
 >>> base_geometry.integer_validator("testVal", 0)
+Traceback (most recent call last):
 ValueError: testVal must be greater than 0
+
+>>> base_geometry = baseGeometry()
+>>> base_geometry.integer_validator("testVal", -1)
+Traceback (most recent call last):
+ValueError: testVal must be greater than 0
+
+>>> base_geometry = baseGeometry()
+>>> base_geometry.integer_validator("testVal", "r")
+Traceback (most recent call last):
+TypeError: testVal must be an integer
