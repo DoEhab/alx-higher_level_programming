@@ -2,3 +2,7 @@
 >>> base_geometry = baseGeometry()
 >>> base_geometry.area()
 area() is not implemented
+
+>>> base_geometry = BaseGeometry(None)
+    Traceback (most recent call last):
+    TypeError: object() takes no parameters
