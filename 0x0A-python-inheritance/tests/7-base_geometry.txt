@@ -26,3 +26,7 @@ TypeError: testVal must be an integer
 >>> base_geo.integer_validator("another invalid", True)
 Traceback (most recent call last):
 TypeError: another invalid must be an integer
+
+>>> base_geo.integer_validator()
+Traceback (most recent call last):
+TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
