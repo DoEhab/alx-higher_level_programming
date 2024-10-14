@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# File: 1-my_list.py
 """define class my list"""
 
 

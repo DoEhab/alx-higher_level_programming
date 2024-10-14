@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# File: 4-inherit_from
 """define fun is kind of class"""
 
 
