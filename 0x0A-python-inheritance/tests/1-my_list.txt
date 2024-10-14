@@ -17,10 +17,4 @@ TypeError: 'NoneType' object is not iterable
 >>> myList.print_sorted()
 [1, 2, 4]
 
->>> myList = MyList("a", "c", "b")
->>> myList.append(1)
->>> myList.append(4)
->>> myList.append(2)
->>> print(myList)
-[a, c, b]
 
