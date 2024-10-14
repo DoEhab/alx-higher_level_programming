@@ -15,9 +15,9 @@ class Rectangle(BaseGeometry):
             width: rect width
             height: rect height
         """
-        self.integer_validator("width", width)
+        super().integer_validator("width", width)
         self.__width = width
-        self.integer_validator("height", height)
+        super().integer_validator("height", height)
         self.__height = height
 
     def area(self):
@@ -26,6 +26,6 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """return updated string"""
-        result = "[" + str(self.__class__.__name__) + "]"
+        result = "[" + str(self.__class__.__name__) + "] "
         result += str(self.__width) + "/" + str(self.__height)
         return result
