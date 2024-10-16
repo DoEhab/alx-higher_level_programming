@@ -14,4 +14,4 @@ if __name__ == "__main__":
         my_list = []
 
     my_list.append(sys.argv[1:])
-    save_json(my_list)
+    save_json('add_item.json', my_list)
