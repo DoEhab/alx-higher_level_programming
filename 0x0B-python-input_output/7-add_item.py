@@ -10,8 +10,8 @@ if __name__ == "__main__":
 
     try:
         my_list = load_json('dd_item.json')
-    except:
-        print(FileNotFoundError)
+    except FileNotFoundError:
+        my_list = []
 
     my_list.append(load_json(sys.argv[1:]))
     save_json(my_list)
