@@ -85,4 +85,3 @@ class Base:
                 return instance_list
         except FileNotFoundError:
             return []
-
