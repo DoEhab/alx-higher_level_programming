@@ -1,5 +1,5 @@
 import unittest
-from base import Base
+from  models.base import Base
 
 
 class TestBase(unittest.TestCase):
@@ -8,7 +8,7 @@ class TestBase(unittest.TestCase):
     """
     def test_base(self):
         b1 = Base()
-        self.assertEqual(True, False)  # add assertion here
+        self.assertEqual(b1.id, 1)
 
 
 if __name__ == '__main__':
