@@ -1,0 +1,32 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> base_geo = BaseGeometry()
+>>> type(base_geo)
+<class '7-base_geometry.BaseGeometry'>
+
+>>> base_geo.area()
+Exception: area() is not implemented
+
+>>> base_geo = BaseGeometry(None)
+Traceback (most recent call last):
+TypeError: BaseGeometry() takes no arguments
+
+>>> base_geo = BaseGeometry()
+>>> base_geo.integer_validator("testVal", 0)
+Traceback (most recent call last):
+ValueError: testVal must be greater than 0
+
+>>> base_geo.integer_validator("testVal", -1)
+Traceback (most recent call last):
+ValueError: testVal must be greater than 0
+
+>>> base_geo.integer_validator("testVal", "r")
+Traceback (most recent call last):
+TypeError: testVal must be an integer
+
+>>> base_geo.integer_validator("another invalid", True)
+Traceback (most recent call last):
+TypeError: another invalid must be an integer
+
+>>> base_geo.integer_validator()
+Traceback (most recent call last):
+TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
