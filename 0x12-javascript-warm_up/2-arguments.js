@@ -1,9 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/env node
 
-if (process.argv.length.length === 0) {
-  console.log('No argument');
-} else if (process.argv.length.length === 1) {
-  console.log('Argument found');
-} else {
-  console.log('Arguments found');
-}
+const argsLength = process.argv.slice(2).length;
+argsLength === 0 ? console.log('No argument') : argsLength === 1 ? console.log('Argument found') : console.log('Arguments found');
