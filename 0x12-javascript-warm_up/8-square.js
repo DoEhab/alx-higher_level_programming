@@ -2,7 +2,7 @@
 
 if (!isNaN(process.argv[2])) {
   let i = process.argv[2];
-  let j = i;
+  const j = i;
   while (i > 0) {
     console.log('X'.repeat(j));
     i--;
