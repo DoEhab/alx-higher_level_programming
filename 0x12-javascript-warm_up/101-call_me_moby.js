@@ -1,6 +1,6 @@
-#!/usr/bin/node
+#!/usr/bin/env node
 
-module.exports = function callMeMoby(count, callback) {
+exports.callMeMoby = function (count, callback) {
   for (let i = 0; i < count; i++) {
     callback();
   }
