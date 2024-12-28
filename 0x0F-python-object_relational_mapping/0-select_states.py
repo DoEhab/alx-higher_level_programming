@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-# list all states
-# usage: /0-select_states.py <mysql username> \
-#                             <mysql password> \
-#                             <database name>
+"""
+list all states
+usage: /0-select_states.py <mysql username>
+                             <mysql password>
+                             <database name>
+"""
 import MySQLdb
 import sys
 

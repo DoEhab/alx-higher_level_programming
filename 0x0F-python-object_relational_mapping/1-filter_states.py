@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-# list all states
-# usage: /0-filter_states.py <mysql username> \
-#                             <mysql password> \
-#                             <database name>
+"""
+filter states starting with N
+usage: /0-select_states.py <mysql username>
+                             <mysql password>
+                             <database name>
+
+"""
 import MySQLdb
 import sys
 
