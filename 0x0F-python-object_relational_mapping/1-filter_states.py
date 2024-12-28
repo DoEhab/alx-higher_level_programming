@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 filter states starting with N
-usage: /0-select_states.py <mysql username>
+usage: /1-filter_states.py <mysql username>
                              <mysql password>
                              <database name>
 

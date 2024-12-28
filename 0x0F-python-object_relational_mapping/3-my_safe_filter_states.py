@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-# list all states
-# usage: /2-my_filter_states.py <mysql username>
-# <mysql password>
-# <database name>
-# <state name>
+"""
+filter states based  on the passed argument order ASC and sql safe
+usage: /3-my_safe_filter_states.py <mysql username>
+                             <mysql password>
+                             <database name>
+
+"""
 import MySQLdb
 import sys
 
@@ -18,7 +20,8 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
     cursor.execute(
-        "SELECT * FROM `states` WHERE `name` = %s ORDER BY `id` ASC", (state_name,)
+        "SELECT * FROM `states` WHERE `name` = %s ORDER BY `id` ASC", (
+            state_name,)
     )
 
     for row in cursor.fetchall():
