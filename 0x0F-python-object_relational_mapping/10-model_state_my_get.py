@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-print the list of states containing letter a
+print the state id that matches the arg
 """
 import sys
 from sqlalchemy import create_engine
@@ -15,16 +15,17 @@ if __name__ == "__main__":
         ),
         pool_pre_ping=True,
     )
-
+    state_val = sys.argv[4]
     Session = sessionmaker(bind=engine)
     session = Session()
 
     states = (
         session.query(State)
-        .filter(State.name.like("%a%"))
-        .order_by(State.id.asc())
-        .all()
+        .filter(State.name == state_val)
+        .order_by(State.id.asc()).first()
     )
 
-    for row in states:
-        print(f"{row.id}:{row.name}")
+    if states:
+        print(states.id)
+    else:
+        print("Not found")
