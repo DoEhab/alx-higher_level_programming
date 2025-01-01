@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-print the state id that matches the arg
+add new state
 """
 import sys
 from sqlalchemy import create_engine
@@ -15,20 +15,13 @@ if __name__ == "__main__":
         ),
         pool_pre_ping=True,
     )
-    state_val = sys.argv[4]
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = (
-        session.query(State)
-        .filter(State.name == state_val)
-        .order_by(State.id.asc())
-        .first()
-    )
+    new_state = State(name="Louisiana")
+    session.add(new_state)
 
-    if states:
-        print(states.id)
-    else:
-        print("Not found")
+    print(f"{new_state.id}")
 
+    session.commit()
     session.close()
