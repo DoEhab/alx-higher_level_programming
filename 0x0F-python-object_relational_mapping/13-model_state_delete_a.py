@@ -18,7 +18,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    session.query(State).filter(State.id == 2).update({"name": "New Mexico"})
+    session.query(State).filter(State.name.like("%a%")).delete()
 
     session.commit()
     session.close()
