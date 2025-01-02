@@ -20,7 +20,9 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
     cursor.execute(
-        "SELECT * FROM `states` WHERE `name` = '" + state_name + "' ORDER BY `id` ASC"
+        "SELECT * FROM `states` WHERE `name` = '{}' ORDER BY `id` ASC".format(
+            state_name
+        )
     )
 
     for row in cursor.fetchall():
