@@ -1,4 +1,4 @@
 #!/bin/bash
-#Display the size of the body response
+# return response size in bytes
 curl -s "$1" | wc -c
 
