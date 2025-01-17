@@ -13,6 +13,6 @@ if __name__ == "__main__":
     response = requests.get(url, auth=HTTPBasicAuth(name, password))
     if response.status_code == 200:
         data = response.json()
-        print("{}", data.get("id"))
+        print("{}".format(data.get("id")))
     else:
         print("None")
