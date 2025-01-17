@@ -2,6 +2,7 @@
 """ this module send post request with value to search for """
 import requests
 import sys
+from requests.auth import HTTPBasicAuth
 
 
 if __name__ == "__main__":
@@ -10,7 +11,7 @@ if __name__ == "__main__":
     name = sys.argv[1]
     password = sys.argv[2]
     response = requests.get(url, auth=HTTPBasicAuth(name, password))
-    if response.staus_code == 200:
+    if response.status_code == 200:
         data = response.json()
         print("{}", data.get("id"))
     else:
