@@ -1,6 +1,6 @@
 #!/usr/bin/python3
+""" This module print url response"""
 import urllib.request
-""" print url response"""
 
 
 if __name__ == "__main__":
