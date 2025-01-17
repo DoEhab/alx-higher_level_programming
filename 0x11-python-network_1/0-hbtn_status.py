@@ -2,6 +2,7 @@
 import urllib.request
 """ print url response"""
 if __name__ == "__main__":
+    """ print response type and content"""
     url = "https://alx-intranet.hbtn.io/status"
     with urllib.request.urlopen(url) as response:
         html = response.read()
