@@ -1,4 +1,3 @@
 #!/bin/bash
-# return response size in bytes
+# return the size of the response in bytes
 curl -s "$1" | wc -c
-
