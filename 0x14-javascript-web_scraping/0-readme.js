@@ -9,6 +9,6 @@ if (process.argv[2]) {
       console.log(line);
     });
   } catch (err) {
-      console.log(err);
+    console.log(err);
   }
 }
