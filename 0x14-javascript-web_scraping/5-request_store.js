@@ -6,6 +6,6 @@ const filePath = process.argv[3];
 request.get(url, function (error, response, body) {
   if (!error) {
     const data = JSON.parse(body);
-    fs.watchFile(filePath, data);
+    fs.writeFile(filePath, data);
   }
 });
