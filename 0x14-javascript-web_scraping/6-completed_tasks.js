@@ -7,7 +7,7 @@ request.get(url, function (error, response, body) {
     const result = {};
     data.forEach(element => {
       if (element.completed) {
-        result[element.id] = element.userId;
+        result[element.userId] = element.id;
       }
     });
     console.log(result);
