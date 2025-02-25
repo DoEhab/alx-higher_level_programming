@@ -1,6 +1,3 @@
-$.get('https://swapi-api.alx-tools.com/api/films/?format=json', function (data) {
-  const result = data.results;
-  for (const movie of result) {
-    $('#list_movies').append(`<li>${movie.title}</li>`);
-  }
+$.get('https:/pi.alx-tools.com/api/people/5/?format=json', function (data) {
+  $('DIV#character').text(data.name);
 });
